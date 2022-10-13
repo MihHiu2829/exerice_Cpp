@@ -180,12 +180,47 @@ int  main()
 	LIST A ;  
 	initLIST(A); 
 	
-NhapSach(A) ; 
+//NhapSach(A) ; 
+//xuat1DanhSach(A) ; 
+//cout<<endl;  
+//cout<<"Danh sach sap xep giam: ";  
+//sortDown(A) ; 
+//xuat1DanhSach(A) ; 
+int chon;
+while(true){
+char x[20];
+printf("\n-----------MENU QUAN LY SACH-----------------\n");
+printf("1/Nhap sach\n");
+printf("2/Xuat danh sach\n");
+printf("3/Sap xep giam dan so luong sach\n");
+printf("4/Tim sach thuoc don vi khoa\n");
+printf("5/Chen 1 cuon sach\n");
+printf("0/THOAT!!!\n");
+printf("--->Nhap lua chon cua ban :");
+scanf("%d",&chon);
+switch(chon){
+case 1:
+Nhap1CuonSach(A) ; 
+break;
+case 2:
+printf("\t\t---------Danh sach cac sach---------\n");
 xuat1DanhSach(A) ; 
-cout<<endl;  
-cout<<"Danh sach sap xep giam: ";  
-sortDown(A) ; 
-xuat1DanhSach(A) ; 
+break;
+case 3:
+	sortDown(A) ; 
+printf("\n\t\t--------Danh sach sau khi sap xep----------\n");
+xuat1DanhSach(A) ;
+break;
+case 4:
+findXandXshower(A) ;
+break;
+case 5:
+findX(A) ; 
+case 0:
+return 0;
+}
+return 0;
 
+}
 
 }
